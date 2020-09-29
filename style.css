@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CSS du menu de navigation */
+
+.burger {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 25px;
+    cursor: pointer;
+    z-index: 1000;
+    overflow-y: hidden;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 266);
+    margin: 5px;
+    transition: all 0.5s ease;
+
+}
+
+.nav {
+    display: flex;
+    background-color: #D95252;
+    color: rgb(226, 226, 226);
+    height: 100vh;
+    width: 50%;
+    position: fixed;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.nav-links {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.nav-links li {
+    list-style: none;
+    cursor: pointer;
+    opacity: 0;
+
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(226, 226, 226);
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+.hero {
+    background-image: url("public/hero-background.jpg");
+    background-size: cover;
+    color: rgb(226, 226, 226);
+    height: 100vh;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/*
+Css hero Banner
+ */
+.hero h1 {
+    font-size: 60px;
+}
+
+.hero h2 {
+    letter-spacing: 6px;
+}
+
+.skills {
+    background-color: rgb(226, 226, 226);
+    color: black;
+    height: 100vh;
+    width: 100%;
+}
+
+.skills img{
+    max-height: 2em;
+}
+.skills .skills-title {
+    height: 8vh;
+}
+
+.skills .skills-title h3 {
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.skills-container {
+
+}
+
+.skills-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 46vh;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    transition: 1.5s;
+}
+
+.skills-container h4 {
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px;
+}
+
+.skills-container .skill1 {
+    background-color: #7D666E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.skills-container .skill2 {
+    background-color: #A0D9CB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-container .skill3 {
+    background-color: #FFF8C9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-container .skill4 {
+    background-color: #FFBE67;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-container .skill5 {
+    background-color: #FF6666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-container .skill6 {
+    background-color: #484D58;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    transition: 0.5s;
+}
+
+.skills-container .card-active {
+    background-color: rgb(226, 226, 226);
+    color: black;
+}
+
+.card-content {
+    display: none;
+}
+
+.card-active h4 {
+    display: none;
+}
+
+.card-active .card-content {
+    display: flex;
+    position: relative;
+    align-items: center;
+    z-index: 2;
+
+}
+
+.card-active .card-content .card-logos {
+    width: 15%;
+    padding: 15px;
+}
+
+.card-active .card-content .col-content {
+    display: block;
+}
+
+.card-active .card-content .card-title {
+    padding: 15px 30px 5px 30px;
+    font-size: 30px;
+}
+
+.card-active .card-content .card-text {
+    padding: 10px 30px;
+    text-justify: inter-word;
+}
+
+.card-active .card-content .card-text p {
+    justify-content: flex-end;
+}
+
+.about {
+    height: 67vh;
+    background-color: black;
+    color: rgb(226, 226, 226);
+}
+.about-container{
+    display: flex;
+    align-items: stretch;
+    height: 85%;
+}
+.about h3 {
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+    padding-top: 10px;
+}
+.about .picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+
+
+}
+.about img {
+    max-height: 20em;
+    min-height: 1em;
+    }
+
+.about .self-spitch{
+    width: 50%;
+    background-color: #FFBE67;
+    margin : 2em;
+    padding: 2em;
+    display: flex;
+    text-align: justify;
+    text-justify: inter-cluster;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .self-spitch p {
+
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    color: black;
+    width: fit-content;
+    font-size: 30px;
+}
+.footer {
+    height: 30vh;
+    background-color: #FF6666;
+    display: flex;
+    text-align: center;
+
+}
+.footer img{
+    max-height: 2em;
+
+}
+
+.footer-nav {
+    width: 50%;
+
+}
+.footer-nav-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav-link a{
+    color: black;
+    text-decoration: none;
+    padding : 10px 0;
+}
+
+.group-form{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-contact{
+    width: 50%;
+}
+
+.footer-contact-link {
+    display: flex;
+    flex-direction: column;
+}
+.footer-contact-link a{
+    color: black;
+    text-decoration: none;
+    padding : 10px 0;
+}
+.footer h4{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+.footer-contact a {
+    color: black;
+    text-decoration: none;
+
+}
+.footer-contact a img {
+    color: rgb(226, 226, 226);
+    padding-right: 5px;
+    transform: translateY(8px);
+}
+
+
+
+.copyright {
+    height: 3vh;
+    width: 100%;
+    text-align: center;
+    background-color: #D95252;
+    color: rgb(226, 226, 226);
+    position: relative;
+    bottom: 0;
+}
