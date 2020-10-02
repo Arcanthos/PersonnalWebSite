@@ -2,7 +2,6 @@
 @font-face {
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 400;
     src: url('public/Font/Poppins/poppins-v13-latin-regular.eot'); /* IE9 Compat Modes */
     src: local('Poppins Regular'), local('Poppins-Regular'),
     url('public/Font/Poppins/poppins-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
@@ -10,9 +9,6 @@
     url('public/FONT/Poppins/poppins-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
     url('public/FONT/Poppins/poppins-v13-latin-regular.svg#Poppins') format('svg'); /* Legacy iOS */
 }
-
-
-
 
 * {
     margin: 0;
